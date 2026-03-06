@@ -11,6 +11,7 @@ protocol TopupDependency: Dependency {
     
     var topupBaseViewController: ViewControllable { get }
     var cardsOnFileRepository: CardOnFileRepository { get }
+    var superPayRepository: SuperPayRepository { get }
 }
 
 final class TopupComponent: Component<TopupDependency>,
@@ -23,7 +24,8 @@ final class TopupComponent: Component<TopupDependency>,
     var cardsOnFileRepository: CardOnFileRepository {
         dependency.cardsOnFileRepository
     }
-    
+    var superPayRepository: SuperPayRepository { dependency.superPayRepository }
+
     fileprivate var topupBaseViewController: ViewControllable {
         dependency.topupBaseViewController
     }

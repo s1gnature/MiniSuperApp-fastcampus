@@ -13,7 +13,8 @@ final class FinanceHomeComponent: Component<FinanceHomeDependency>,
                                   TopupDependency {
 
     // MARK: - SuperPayDashboardDependency
-    var balance: ReadOnlyCurrentValuePublisher<Double> { balancePublisher }
+    let superPayRepository: SuperPayRepository
+    var balance: ReadOnlyCurrentValuePublisher<Double> { superPayRepository.balance }
     var balanceFormatter: BalanceFormatter
 
     // MARK: - CardOnFileDashboardDependency
@@ -22,18 +23,16 @@ final class FinanceHomeComponent: Component<FinanceHomeDependency>,
     // MARK: - TopupDependency
     var topupBaseViewController: any ViewControllable
 
-    private let balancePublisher: CurrentValuePublisher<Double>
-
     init(
         dependency: FinanceHomeDependency,
-        balancePublisher: CurrentValuePublisher<Double>,
         balanceFormatter: BalanceFormatter,
         cardsOnFileRepository: CardOnFileRepository,
+        superPayRepository: SuperPayRepository,
         topupBaseViewController: ViewControllable
     ) {
-        self.balancePublisher = balancePublisher
         self.balanceFormatter = balanceFormatter
         self.cardsOnFileRepository = cardsOnFileRepository
+        self.superPayRepository = superPayRepository
         self.topupBaseViewController = topupBaseViewController
         super.init(dependency: dependency)
     }
@@ -52,15 +51,15 @@ final class FinanceHomeBuilder: Builder<FinanceHomeDependency>, FinanceHomeBuild
     }
 
     func build(withListener listener: FinanceHomeListener) -> FinanceHomeRouting {
-        let balancePublisher = CurrentValuePublisher<Double>(10000)
         let balanceFomatter = BalanceFormatter()
+        let superPayRepository = SuperPayRepositoryImpl()
         let cardOnFileRepository = CardOnFileRepositoryImpl()
         let viewController = FinanceHomeViewController()
         let component = FinanceHomeComponent(
             dependency: dependency,
-            balancePublisher: balancePublisher,
             balanceFormatter: balanceFomatter,
             cardsOnFileRepository: cardOnFileRepository,
+            superPayRepository: superPayRepository,
             topupBaseViewController: viewController
         )
         

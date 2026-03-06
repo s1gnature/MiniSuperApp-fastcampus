@@ -5,6 +5,7 @@
 //  Created by narr on 5/6/24.
 //
 
+import Foundation
 import ModernRIBs
 import Combine
 import CombineExt
@@ -54,6 +55,7 @@ final class SuperPayDashboardInteractor: PresentableInteractor<SuperPayDashboard
         // TODO: Implement business logic here.
 
         dependency.balance
+            .receive(on: DispatchQueue.main)
             .compactMap { [weak self] balance in
                 self?.dependency.balanceFormatter.string(from: balance as NSNumber)
             }

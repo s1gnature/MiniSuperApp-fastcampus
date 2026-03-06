@@ -16,6 +16,7 @@
 		C1098C842CB69261001F59F7 /* PaymentMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1098C832CB69261001F59F7 /* PaymentMethodModel.swift */; };
 		C1098C882CB692C1001F59F7 /* CardOnFileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1098C872CB692C1001F59F7 /* CardOnFileRepository.swift */; };
 		C1098C8A2CB694E9001F59F7 /* PaymentMethodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1098C892CB694E9001F59F7 /* PaymentMethodViewModel.swift */; };
+		C12FA07A2F5ABF2B005CD1CA /* SuperPayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12FA0792F5ABF2B005CD1CA /* SuperPayRepository.swift */; };
 		C1B576792BE8B0C2006093C8 /* SuperPayDashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B576752BE8B0C2006093C8 /* SuperPayDashboardRouter.swift */; };
 		C1B5767A2BE8B0C2006093C8 /* SuperPayDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B576762BE8B0C2006093C8 /* SuperPayDashboardViewController.swift */; };
 		C1B5767B2BE8B0C2006093C8 /* SuperPayDashboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B576772BE8B0C2006093C8 /* SuperPayDashboardBuilder.swift */; };
@@ -93,6 +94,7 @@
 		C1098C832CB69261001F59F7 /* PaymentMethodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodModel.swift; sourceTree = "<group>"; };
 		C1098C872CB692C1001F59F7 /* CardOnFileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOnFileRepository.swift; sourceTree = "<group>"; };
 		C1098C892CB694E9001F59F7 /* PaymentMethodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodViewModel.swift; sourceTree = "<group>"; };
+		C12FA0792F5ABF2B005CD1CA /* SuperPayRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayRepository.swift; sourceTree = "<group>"; };
 		C1B576752BE8B0C2006093C8 /* SuperPayDashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardRouter.swift; sourceTree = "<group>"; };
 		C1B576762BE8B0C2006093C8 /* SuperPayDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardViewController.swift; sourceTree = "<group>"; };
 		C1B576772BE8B0C2006093C8 /* SuperPayDashboardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardBuilder.swift; sourceTree = "<group>"; };
@@ -176,7 +178,6 @@
 		C1098C5D2CB12F36001F59F7 /* CardOnFileDashboard */ = {
 			isa = PBXGroup;
 			children = (
-				C1098C862CB692B7001F59F7 /* Repository */,
 				C1098C852CB692AB001F59F7 /* Models */,
 				C1098C7D2CB68D8C001F59F7 /* Views */,
 				C1098C5E2CB12F4E001F59F7 /* CardOnFileDashboardBuilder.swift */,
@@ -210,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				C1098C872CB692C1001F59F7 /* CardOnFileRepository.swift */,
+				C12FA0792F5ABF2B005CD1CA /* SuperPayRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -246,6 +248,7 @@
 				FA83F0092E47614F004966FA /* AddPaymentMethod */,
 				C1098C5D2CB12F36001F59F7 /* CardOnFileDashboard */,
 				C1B576742BE8B0A1006093C8 /* SuperPayDashboard */,
+				C1098C862CB692B7001F59F7 /* Repository */,
 				F57F6AE426DB4A2700C0117D /* FinanceHomeRouter.swift */,
 				F57F6AE526DB4A2700C0117D /* FinanceHomeViewController.swift */,
 				F57F6AE626DB4A2700C0117D /* FinanceHomeBuilder.swift */,
@@ -544,6 +547,7 @@
 				FA3083C02E509B3A00358BE7 /* EnterAmountInteractor.swift in Sources */,
 				C1B5767B2BE8B0C2006093C8 /* SuperPayDashboardBuilder.swift in Sources */,
 				F57F6AEB26DB4A2700C0117D /* FinanceHomeInteractor.swift in Sources */,
+				C12FA07A2F5ABF2B005CD1CA /* SuperPayRepository.swift in Sources */,
 				F5EAA21B270B395900EF2B70 /* AppHomeInteractor.swift in Sources */,
 				C1B576812BE8C1E2006093C8 /* Combine+Utils.swift in Sources */,
 				FA3083B52E5089E700358BE7 /* TopupRouter.swift in Sources */,
